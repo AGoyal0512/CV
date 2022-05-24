@@ -1,0 +1,280 @@
+\documentclass[a4paper,20pt]{article}
+
+%---------- Importing Libraries---------- %
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+%---------------------------------------- %
+
+%---------- Page Formatting ------------- %
+
+\urlstyle{rm}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.530in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.45in}
+\addtolength{\textheight}{1in}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%----------------------- Custom Commands ------------------------ %
+
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemWithoutTitle}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \text{#3} & \textbf{#4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeEduc}[4]{
+  \vspace{-1pt}\item[]
+    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \text{#3} & \textbf{#4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-3pt}}
+\newcommand{\projectSubItem}[3]{\resumeItem{#1 \vspace{1pt}}\\{#2 \vspace{1pt}}\\{#3}\vspace{-3pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeSubHeadingEducStart}{\begin{itemize}[leftmargin=0em]}
+\newcommand{\resumeSubHeadingEducEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+%--------------------------------------------------------------------------- %
+
+%---------- CV begins here ---------- %
+
+\begin{document}
+
+%---------- Title Section ---------- %
+
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\LARGE Agam Goyal}} & Email: \href{mailto:}{agoyal25@wisc.edu}\\
+  \href{https://github.com/AGoyal0512}{GitHub: ~~github.com/agoyal0512} & Mobile:~~~+1 608-867-9142 \\
+ \href{https://www.linkedin.com/in/agamgoyal5/}{LinkedIn: ~~linkedin.com/in/agamgoyal5} & \href{https://www.linkedin.com/in/agamgoyal5/}{Portfolio: ~~agoyal0512.github.io}\\
+\end{tabular*}
+
+%----------------------------------- %
+
+%---------- Education Section ---------- %
+
+\section{Education}
+  \resumeSubHeadingEducStart
+    \resumeEduc
+      {University of Wisconsin - Madison | Madison, Wisconsin}{Sep 2020 - May 2024}
+      {Bachelor of Science - Computer Science (Honors), Mathematics, Data Science}{GPA: 3.99}
+    \resumeSubHeadingEducEnd
+    
+    {\footnotesize{\textbf{Courses:} Advanced Data Structures, Algorithms, Neural Networks, Computer Vision, Digital Design and Machine Organization, Optimization, Statistical Data Modeling, Data Ethics and Policy, Linear Algebra, Probability, Time Series Analysis, Econometrics }}
+
+%---------------------------------------- %
+
+%---------- Skills Section ---------- %
+
+\vspace{-4pt}
+\section{Skills}
+\resumeSubHeadingListStart
+	\resumeSubItem{Languages}{~~~~Java, Python, R, C/C++, MATLAB, HTML/CSS, JavaScript, Julia, LaTeX, STATA}
+	\resumeSubItem{Frameworks}{~~~~PyTorch, TensorFlow, Keras, MySQL, Django, Flask, Scikit-learn, NLTK, OpenCV}
+	\resumeSubItem{Platforms}{~~~~Git, Docker, Linux, Windows, MacOS, Tableau, DragonFly, GCP, QlikSense Cloud}
+\resumeSubHeadingListEnd
+
+%------------------------------------- %
+
+%---------- Professional Experience Section ---------- %
+
+\vspace{-6pt}
+\section{Professional Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading{Institute of Clinical and Transnational Research}{Madison, WI}
+    {Evaluation and Tracking Intern}{Sep 2021 - May 2022}
+    \resumeItemListStart
+        \resumeItem{DBMS}
+          {Maintained \& improved database workflows for large scale ($\sim1$M rows) clinical research records using MySQL}
+          \resumeItem{API}
+          {Worked with the REST API to manage over 100,000 system calls to manage the contents of these databases}
+          \resumeItem{Cloud Analytics}
+          {Created 2 high quality interactive dashboards with QlikSense to minimize cognitive bias in healthcare}
+      \resumeItemListEnd
+\vspace{-7pt}
+    \resumeSubheading
+		{Camfyvision Innovations}{Bengaluru, India}
+		{Computer Vision Research Intern}{May 2021 - Aug 2021}
+		\resumeItemListStart
+        \resumeItem{Development}
+          {Worked on algorithm testing, product development and deployment for the Crime Department as client}
+        \resumeItem{Products}
+          {Developed and improved the Violence Detection and Image Colorization algorithms in PyTorch \& OpenCV}
+            \resumeItem{Image Enhancement}{Modified existing CNN architectures and used image processing to enhance blurred images}
+		\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%---------------------------------------------------- %
+
+%---------- Mentorship Experience Section ---------- %
+
+\vspace{-7pt}
+\section{Mentorship Experience}
+  \resumeSubHeadingListStart
+  \resumeSubheading
+		{UW-Madison Information School}{Madison, WI}
+		{Course Grader | L I S 461: Data Ethics and Policy}{Jan 2022 - May 2022}
+		\resumeItemListStart
+        \resumeItem{Grading}
+          {Graded over 80 hours for an upper-level mandatory data ethics course for the Data Science major}
+        \resumeItem{Course Content}
+          {Worked in tandem with course faculty to provide a seamless experience to the 400 + students enrolled}
+		\resumeItemListEnd
+  \vspace{-5pt}
+    \resumeSubheading{UW-Madison Dept. of Electrical and Computer Engineering}{Madison, WI}
+    {Undergraduate Teaching Assistant | ECE 539: Artificial Neural Networks}{Sep 2021 - Jan 2022}
+    \resumeItemListStart
+        \resumeItem{Course content}
+          {Developed course homework assignments testing Deep Learning concepts in Python and MATLAB}
+          \resumeItem{Lab Assistant}
+          {Led coding sessions for groups of 100+ students to help with debugging and implementing efficient code}
+      \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-------------------------------------------------- %
+
+%---------- Research Section ---------- %
+
+\section{Research}
+\resumeEduc
+		{Machine Learning approaches to Oscillator and Clock Synchronization}{Madison, WI}
+		{REU 2022 @ UW - Madison | PI: Hanbaek Lyu}{June 2022 - Present}
+		\resumeItemListStart
+        \resumeItemWithoutTitle{Developing the Learning to Predict Synchronization (L2PSync) framework to classify coupled oscillator models based on their initial dynamics and state into two classes: ‘synchronizing’ or ‘non-synchronizing’}
+        \resumeItemWithoutTitle{``Learning" what ML algorithms ``learn" from a massive amount of data and using it to advance our understanding of theoretical foundations of coupled oscillators}
+		\resumeItemListEnd
+
+\resumeEduc
+		{Canadian Traveller Problem, Ants, and the Grid}{Madison, WI}
+		{Directed Study with Dr. Marc Renault}{Jan 2022 - Present}
+		\resumeItemListStart
+        \resumeItemWithoutTitle{Developing a Java-based simulation for modeling the performance of 15 unique traversal algorithms on the grid network}
+        \resumeItemWithoutTitle{Using the k-CTP to model the movement of log-horn ants bringing food back to their colonies through competitive analysis}
+		\resumeItemListEnd
+		
+\resumeEduc
+		{Machine Learning for Additive Manufacturing (ML4AM)}{Madison, WI}
+		{Informatics Skunkworks}{Jan 2021 - Present}
+		\resumeItemListStart
+        \resumeItemWithoutTitle{Developing an automated approach to identify features of keyhole pores using PyTorch during 3D printing of metal parts}
+        \resumeItemWithoutTitle{Utilizing LSTM models by taking a novel approach to observing the correlation of pore depths over time}
+		\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%----------------------------------- %
+
+%---------- Awards Section ---------- %
+
+\section{Honors and Awards}
+\begin{description}[font=$\bullet$]
+\item\small {Awarded with the Dean's List recognition every semester for a semester GPA above 3.85}
+\vspace{-5pt}
+\item\small {NSF REU Grant DMS-2010035 and Welton Honors Summer Sophomore Apprenticeship Grant 2022 (\$3000)}
+\vspace{-5pt}
+\item\small {National Talent Scholar of India (NTS 2018), Qualified IIT-JEE Advanced 2020 and KVPY SA-1 2019 Examinations}
+\end{description}
+
+%----------------------------------- %
+
+%---------- Clubs Section ---------- %
+
+\vspace{-5pt}
+\section{Clubs and Societies}
+  \resumeSubHeadingEducStart
+	\resumeEduc
+		{Google Developer Student Club (GDSC)}{Madison, WI}
+		{Community Outreach Lead}{Jun 2021 - Present}
+		\resumeItemListStart
+        \resumeItem{Outreach}
+          {Developed partnerships with firms like Google and Northwestern Mutual for sponsorships to conduct events}
+        \resumeItem{Treasurer}
+          {Raised funds of \$5000 to successfully conduct a 24-hr long hackathon - \href{https://www.cs.wisc.edu/2021/11/09/cheesehacks-hackathon-participants-build-apps-to-address-real-world-issues-eat-a-lot-of-cheese/}{CheeseHacks}, with 100+ participants}
+		\resumeItemListEnd
+
+    \resumeEduc
+		{Wisconsin Autonomous}{Madison, WI}
+    		{Perception Team Member}{May 2021 - Aug 2021}
+		\resumeItemListStart
+        \resumeItem{AVs}
+          {Worked on software development to improve perception of self-driving race car for the \href{https://autodrivechallenge.com/}{AutoDrive competition}}
+        \resumeItem{Computer Vision}
+          {Used OpenCV library in Python to implement the Lane and Cone Detection algorithms}
+		\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-------------------------------------- %
+
+%---------- Projects Section ---------- %
+
+\vspace{-5pt}
+\section{Projects}
+\resumeSubHeadingListStart
+\projectSubItem{Madison Metro Optimization [https://github.com/AGoyal0512/Madison-Metro-Optimization]}
+{Used the Minimum-Cost network flow problem and the Clp linear optimizer in Julia to model Madison Metro bus transit services and optimize it to reduce travel times and improve flow for passengers, while also reducing costs for the authorities}
+{\textbf{Tools:} Linear Programming, Network Flow, Julia \texttt{Clp} Optimizer}
+
+\projectSubItem{Trade Balance Forecasting [https://github.com/AGoyal0512/Trade-Balance-Forecasting]}
+{Built a forecasting model using advanced Time Series Analysis techniques to predict the United States Trade Deficit in Goods and Services for the next 12 months and achieved a low forecast error within the range of a 95\% confidence interval}
+{\textbf{Tools:} Time Series Analysis, Python \texttt{statsmodels}, ARIMA models}
+
+\projectSubItem{Helping Hands [https://github.com/AGoyal0512/Helping-Hands]}
+{Built a fully-deployed predictor model that uses Natural Language Processing techniques to analyze user texts, social media posts, other health assessment forms, etc. to predict suicidality with a certain level of confidence}
+{\textbf{Tools:} Natural Language Processing, Neural Networks, Flask, NLTK}
+
+\projectSubItem{Madison Crime Analysis [https://github.com/AGoyal0512/Madison-Crime]}
+{Worked on a spatial data analytics project to study the nature of and gather trends in the types and intensities of crime in the city of Madison to recommend solutions and potential framework changes to the Madison Police Department}
+{\textbf{Tools:} Python \texttt{GeoPandas}, Data Wrangling and Visualization, Spatial Data Analytics}
+\resumeSubHeadingListEnd
+
+%----------------------------------- %
+
+
+\end{document}
+
+%---------- CV ends here ---------- %
